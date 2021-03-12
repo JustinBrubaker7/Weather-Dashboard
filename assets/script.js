@@ -1,6 +1,8 @@
 
 var searchBoxEl = document.getElementById("city-search-input");
 var searchBoxElForm = document.getElementById("city-search-form");
+var weatherCardEl = document.getElementById("weather");
+var weatherCardHeading = document.getElementById("weather-card-heading");
 
 
 function getApi(citySearchTerm) {
@@ -9,24 +11,50 @@ function getApi(citySearchTerm) {
   
     fetch(requestUrl)
       .then(function (response) {
-        return response.json();
+        console.log(response.status)
+          if(response.status == 200){
+            return response.json();
+          } else {
+              //TODO:dipslay error
+              return;
+          }
+
+        
       })
       .then(function (data) {
-        console.log(data)
+        // console.log(data.weather.id)
+        // console.log(data)
+        displayData(data);
         
       });
   }
 
-  //fetchButton.addEventListener('click', getApi);
-  
 
+  function displayData(data){
+
+	document.getElementById('description').innerHTML = data.weather[0].description;
+	document.getElementById('temp').innerHTML = Math.round(data.main.temp) + '&deg;';
+	document.getElementById('location').innerHTML = data.name;
+    document.getElementById('humidity').innerHTML = "Humidity: " + data.main.humidity;
+    document.getElementById('wind-speed').innerHTML = "Wind Speed: " + data.wind.speed + "mph";
+    document.getElementById('clouds').innerHTML = "Cloud Coverage: " + data.clouds.all + "%";
+
+  }
+
+
+
+
+
+
+
+
+
+// NEEDS TO BE LAST
 
   searchBoxElForm.addEventListener("submit", function(e){
         e.preventDefault();
-        var seachBoxValue = searchBoxEl.value;
-        console.log(seachBoxValue)
-    
-    getApi(seachBoxValue);
+        var seachBoxValue = searchBoxEl.value.trim();
+        getApi(seachBoxValue);
 });
 
 
@@ -38,3 +66,11 @@ function getApi(citySearchTerm) {
   //the API data is fetched
   //the data is displayed
   //
+
+
+  //weather.description
+  //main.temp
+  //main.humidity
+  //wind.speed
+  //clouds.all in %
+  //name
