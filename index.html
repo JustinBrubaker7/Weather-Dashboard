@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand col-3">Home</a>
-            <h1 class="weather-title text-white ml-4 col-4">The Weather App<span style="color: rgb(255, 238, 0);"><i class="far fa-sun fa-xs yellow"></i></span></h1>
+            <h1 class="weather-title text-white ml-4 col-4 text-center">The Weather App<span style="color: rgb(255, 238, 0);"><i class="far fa-sun fa-xs yellow"></i></span></h1>
             <form class="d-flex col-3" id="city-search-form">
               <input class="form-control me-2 outline-primary" id="city-search-input"  placeholder="Search By City" aria-label="Search">
               <button class="btn btn-outline-primary" type="submit">Search</button>
@@ -23,23 +23,28 @@
     <div class="container-fluid">
         
         <div class="row no-gutters">
-            <div class="col-12 col-sm-4">
+            <div class="col-12 col-sm-3">
                     <h5 class="">Recent Searches</h5>
             </div>
 
     
-            <div class="col-12 col-sm-8">
-                <div id="weather">
-                    <div id="description"></div>
-                    <h1 id="temp"></h1>
-                    <div id="location"></div>
-                    <div id="weather-details">
+            <div class="col-12 col-sm-6 d-flex justify-content-center" id="weather-card">
+                <div class="" id="weather">
+                    <div class="d-flex justify-content-evenly">
+                        <div class="mx-5" id="location"></div>
+                        <div  class="mx-5" id="description"></div>
+                    </div>
+                    <h1 class="p-2 text-center" id="temp"></h1>
+            
+                    <div class="d-flex justify-content-evenly" id="weather-details">
                         <div id="humidity"></div>
                         <div id="wind-speed"></div>
                         <div id="clouds"></div>
                     </div>
                 </div>
+  
             </div>
+            <div class="col-6 col-sm-3"></div>
         </div>
     </div>
 

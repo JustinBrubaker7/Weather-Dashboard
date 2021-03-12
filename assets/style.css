@@ -2,3 +2,29 @@
     margin-right: 0;
     margin-left: 0;
 }
+
+
+#weather-card2{
+    border: solid black 1px;
+    margin: 10px;
+    padding: 10px;
+}
+
+#temp {
+    font-size: 500%;
+}
+
+#location,
+#description{
+    font-size: 120%;
+    color: cadetblue;
+    border-bottom: solid black 1px;
+}   
+
+#humidity,
+#wind-speed,
+#clouds{
+    color: rgb(172, 172, 172);
+    padding: 5px;
+    text-align: center;
+}

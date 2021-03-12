@@ -1,7 +1,7 @@
 
 var searchBoxEl = document.getElementById("city-search-input");
 var searchBoxElForm = document.getElementById("city-search-form");
-var weatherCardEl = document.getElementById("weather");
+var weatherCardEl = document.getElementById("weather-card");
 var weatherCardHeading = document.getElementById("weather-card-heading");
 
 
@@ -38,7 +38,7 @@ function getApi(citySearchTerm) {
     document.getElementById('humidity').innerHTML = "Humidity: " + data.main.humidity;
     document.getElementById('wind-speed').innerHTML = "Wind Speed: " + data.wind.speed + "mph";
     document.getElementById('clouds').innerHTML = "Cloud Coverage: " + data.clouds.all + "%";
-
+    weatherCardEl.setAttribute("id", "weather-card2")
   }
 
 
@@ -62,15 +62,3 @@ function getApi(citySearchTerm) {
 
 
 
-  //when someone submits a search
-  //the API data is fetched
-  //the data is displayed
-  //
-
-
-  //weather.description
-  //main.temp
-  //main.humidity
-  //wind.speed
-  //clouds.all in %
-  //name
