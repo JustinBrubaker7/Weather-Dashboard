@@ -1,3 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+#main{
+
+    height: 100vh;
+}
+
+
+
 .no-gutters {
     margin-right: 0;
     margin-left: 0;
@@ -8,6 +21,9 @@
     border: solid black 1px;
     margin: 10px;
     padding: 10px;
+    -webkit-box-shadow: 5px 5px 22px -1px rgba(0,0,0,0.37); 
+    box-shadow: 5px 5px 22px -1px rgba(0,0,0,0.37);
+    background-color: white;
 }
 
 #temp {
@@ -24,7 +40,38 @@
 #humidity,
 #wind-speed,
 #clouds{
-    color: rgb(172, 172, 172);
-    padding: 5px;
+    color: rgb(148, 148, 148);
+    padding: 15px;
+    margin: 5px 10px;
     text-align: center;
 }
+
+.clear{
+    background: url("./photos/clear.jpg") !important;
+}
+
+.clouds{
+    background: url("./photos/cloud.jpg") !important;
+}
+
+.thunderstorm{
+    background: url("./photos/thunderstorm.jpg") !important;
+}
+
+.drizzle{
+    background: url("./photos/rain.jpg") !important;
+}
+
+.rain{
+    background: url("./photos/rain.jpg") !important;
+}
+
+.snow{
+    background: url("./photos/snow.jpg") !important;
+}
+
+
+
+
+
+
