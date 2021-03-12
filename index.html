@@ -5,10 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Weather App</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
     <h1 class="weather-title">The Weather App<span style="color: rgb(255, 238, 0);"><i class="far fa-sun fa-xs yellow"></i></span></h1>
+    <form id="city-search-form">
+        <input id="city-search-input" type="text">
+    </form>
+    <div id="weather-card"></div>
 
     <script src="https://kit.fontawesome.com/159debb6c8.js" crossorigin="anonymous"></script>
     <script src="./assets/script.js"></script>
