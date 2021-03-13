@@ -4,6 +4,9 @@ var searchBoxElForm = document.getElementById("city-search-form");
 var weatherCardEl = document.getElementById("weather-card");
 var weatherCardElday1 = document.getElementById("weather-card-5day");
 var weatherCardElday2 = document.getElementById("weather-card-5day-2");
+var weatherCardElday3 = document.getElementById("weather-card-5day-3");
+var weatherCardElday4 = document.getElementById("weather-card-5day-4");
+var weatherCardElday5 = document.getElementById("weather-card-5day-5");
 var weatherCardHeading = document.getElementById("weather-card-heading");
 var bodyEl = document.getElementById("main");
 var pastSearchesEl = document.getElementById("past-searches");
@@ -136,16 +139,30 @@ function getApiForcast(citySearchTerm) {
 
 
   function displayDataForcast(data){
-	document.getElementById('tempurature1').innerHTML = Math.round(data.list[0].main.feels_like) + '&deg;';
-	document.getElementById('city1').innerHTML = data.city.name;
+    document.getElementById('tempurature1').innerHTML = Math.round(data.list[0].main.feels_like) + '&deg;';
+    document.getElementById('city1').innerHTML = data.city.name;
     weatherCardElday1.setAttribute("id", "weather-cardday2");
 
     //day 2
     document.getElementById('tempurature2').innerHTML = Math.round(data.list[1].main.feels_like) + '&deg;';
-	document.getElementById('city2').innerHTML = data.city.name;
+	  document.getElementById('city2').innerHTML = data.city.name;
     weatherCardElday2.setAttribute("id", "weather-cardday3");
 
-  }
+    //day 3
+    document.getElementById('tempurature3').innerHTML = Math.round(data.list[2].main.feels_like) + '&deg;';
+    document.getElementById('city3').innerHTML = data.city.name;
+    weatherCardElday3.setAttribute("id", "weather-cardday4");
+
+   //day 4
+    document.getElementById('tempurature4').innerHTML = Math.round(data.list[3].main.feels_like) + '&deg;';
+    document.getElementById('city4').innerHTML = data.city.name;
+    weatherCardElday4.setAttribute("id", "weather-cardday5");
+
+    //day 5
+    document.getElementById('tempurature5').innerHTML = Math.round(data.list[4].main.feels_like) + '&deg;';
+    document.getElementById('city5').innerHTML = data.city.name;
+    weatherCardElday5.setAttribute("id", "weather-cardday6");
+}
 
 
 

@@ -19,7 +19,10 @@ background-color: rgb(214, 214, 214);
 
 #weather-card2,
 #weather-cardday2,
-#weather-cardday3 {
+#weather-cardday3,
+#weather-cardday4,
+#weather-cardday5,
+#weather-cardday6 {
     border: solid black 1px;
     margin: 10px;
     padding: 10px;

@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-collapse navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand col-3">Home</a>
-            <h1 class="weather-title text-white ml-4 col-4 text-center">The Weather App<span style="color: rgb(255, 238, 0);"><i class="far fa-sun fa-xs"></i></span></h1>
-            <form class="d-flex col-3" id="city-search-form">
+            <h1 class="weather-title text-white ml-4 col-8 col-md-4 text-center">The Weather App<span style="color: rgb(255, 238, 0);"><i class="far fa-sun fa-xs"></i></span></h1>
+            <form class="d-flex col-12 col-md-3" id="city-search-form">
               <input class="form-control me-2 outline-primary" id="city-search-input"  id="autocomplete" placeholder="Search By City" aria-label="Search">
               <button class="btn btn-outline-primary" type="submit">Search</button>
             </form>
@@ -30,7 +30,7 @@
             </div>
 
     
-            <div class="col-12 col-sm-6 d-flex justify-content-center" id="weather-card">
+            <div class="col-12 col-sm-6 d-flex justify-content-center mx-0" id="weather-card">
                 <div class="" id="weather">
                     <div class="d-flex justify-content-evenly">
                         <div class="mx-5" id="location"></div>
@@ -53,7 +53,7 @@
 
 <div class="container-fluid">
 <h2 class="text-white text-center">5-Day Forcast</h2>
-    <div class="row no-gutters">
+    <div class="row no-gutters  d-flex justify-content-around">
         <!--DAY 1-->
         <div class="col-12 col-sm-2 d-flex justify-content-center" id="weather-card-5day">
             <div class="" id="day-1-card">
@@ -72,6 +72,34 @@
                 <h1 class="p-2 text-center" id="tempurature2"></h1>
             </div>
         </div>
+         <!--DAY 3-->
+         <div class="col-12 col-sm-2 d-flex justify-content-center" id="weather-card-5day-3">
+            <div class="" id="day-3-card">
+                <div class="d-flex justify-content-evenly">
+                   <div class="mx-2" id="city3"></div>
+                </div>
+                <h1 class="p-2 text-center" id="tempurature3"></h1>
+            </div>
+        </div>
+
+        <!--DAY 4-->
+        <div class="col-12 col-sm-2 d-flex justify-content-center" id="weather-card-5day-4">
+        <div class="" id="day-4-card">
+            <div class="d-flex justify-content-evenly">
+                <div class="mx-2" id="city4"></div>
+            </div>
+            <h1 class="p-2 text-center" id="tempurature4"></h1>
+        </div>
+    </div>
+    <!--DAY 5-->
+    <div class="col-12 col-sm-2 d-flex justify-content-center" id="weather-card-5day-5">
+        <div class="" id="day-5-card">
+            <div class="d-flex justify-content-evenly">
+                <div class="mx-2" id="city5"></div>
+            </div>
+            <h1 class="p-2 text-center" id="tempurature5"></h1>
+        </div>
+    </div>
 
     </div>
 </div>
