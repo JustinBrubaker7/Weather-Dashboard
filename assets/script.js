@@ -2,6 +2,8 @@
 var searchBoxEl = document.getElementById("city-search-input");
 var searchBoxElForm = document.getElementById("city-search-form");
 var weatherCardEl = document.getElementById("weather-card");
+var weatherCardElday1 = document.getElementById("weather-card-5day");
+var weatherCardElday2 = document.getElementById("weather-card-5day-2");
 var weatherCardHeading = document.getElementById("weather-card-heading");
 var bodyEl = document.getElementById("main");
 var pastSearchesEl = document.getElementById("past-searches");
@@ -11,7 +13,6 @@ var citySearchList = [];
 function getApi(citySearchTerm) {
     
     var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + citySearchTerm + '&units=imperial&appid=9a32d5e00225681fffab293fb6a516e1';
-  
 //     function setRecentSearches(){ 
  
 
@@ -100,10 +101,6 @@ function getApi(citySearchTerm) {
     document.getElementById('temp').appendChild(icon);
   } 
 
-
-
-
-
   }
 
 
@@ -116,8 +113,39 @@ function getApi(citySearchTerm) {
 
 
 
+function getApiForcast(citySearchTerm) {
+    var requestUrl5day = "https://api.openweathermap.org/data/2.5/forecast?q=" + citySearchTerm + "&units=imperial&appid=9a32d5e00225681fffab293fb6a516e1"
+
+    fetch(requestUrl5day)
+      .then(function (response) {
+        console.log(response.status)
+          if(response.status == 200){
+            return response.json();
+          } else {
+            document.getElementById('temp').innerHTML = "Error incorrect city. Try again"
+              return;
+          }
+      })
+
+      .then(function (data) {
+        console.log(data)
+        displayDataForcast(data);
+        //setRecentSearches();
+      });
+  }
 
 
+  function displayDataForcast(data){
+	document.getElementById('tempurature1').innerHTML = Math.round(data.list[0].main.feels_like) + '&deg;';
+	document.getElementById('city1').innerHTML = data.city.name;
+    weatherCardElday1.setAttribute("id", "weather-cardday2");
+
+    //day 2
+    document.getElementById('tempurature2').innerHTML = Math.round(data.list[1].main.feels_like) + '&deg;';
+	document.getElementById('city2').innerHTML = data.city.name;
+    weatherCardElday2.setAttribute("id", "weather-cardday3");
+
+  }
 
 
 
@@ -130,6 +158,7 @@ function getApi(citySearchTerm) {
         e.preventDefault();
         var seachBoxValue = searchBoxEl.value.trim();
         getApi(seachBoxValue);
+        getApiForcast(seachBoxValue)
 });
 
 

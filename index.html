@@ -15,7 +15,7 @@
             <a class="navbar-brand col-3">Home</a>
             <h1 class="weather-title text-white ml-4 col-4 text-center">The Weather App<span style="color: rgb(255, 238, 0);"><i class="far fa-sun fa-xs"></i></span></h1>
             <form class="d-flex col-3" id="city-search-form">
-              <input class="form-control me-2 outline-primary" id="city-search-input"  placeholder="Search By City" aria-label="Search">
+              <input class="form-control me-2 outline-primary" id="city-search-input"  id="autocomplete" placeholder="Search By City" aria-label="Search">
               <button class="btn btn-outline-primary" type="submit">Search</button>
             </form>
           </div>
@@ -49,7 +49,34 @@
             <div class="col-6 col-sm-3"></div>
         </div>
     </div>
+<!-- CONTAINER @ 5 day forcast-->
+
+<div class="container-fluid">
+<h2 class="text-white text-center">5-Day Forcast</h2>
+    <div class="row no-gutters">
+        <!--DAY 1-->
+        <div class="col-12 col-sm-2 d-flex justify-content-center" id="weather-card-5day">
+            <div class="" id="day-1-card">
+                <div class="d-flex justify-content-evenly">
+                   <div class="mx-2" id="city1"></div>
+                </div>
+                <h1 class="p-2 text-center" id="tempurature1"></h1>
+            </div>
+        </div>
+        <!--DAY 2-->
+        <div class="col-12 col-sm-2 d-flex justify-content-center" id="weather-card-5day-2">
+            <div class="" id="day-2-card">
+                <div class="d-flex justify-content-evenly">
+                   <div class="mx-2" id="city2"></div>
+                </div>
+                <h1 class="p-2 text-center" id="tempurature2"></h1>
+            </div>
+        </div>
+
+    </div>
 </div>
+</div>
+
     <script src="https://kit.fontawesome.com/159debb6c8.js" crossorigin="anonymous"></script>
     <script src="./assets/script.js"></script>
 </body>
