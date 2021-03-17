@@ -120,38 +120,22 @@ function getApiForcast(citySearchTerm) {
     weatherCardElday1.setAttribute("id", "weather-cardday2");
 
     //day 2
-<<<<<<< HEAD
     document.getElementById('tempurature2').innerHTML = Math.round(data.list[11].main.feels_like) + '&deg;';
-=======
-    document.getElementById('tempurature2').innerHTML = Math.round(data.list[8].main.feels_like) + '&deg;';
->>>>>>> f1bac9dcfd67ad3a3f4af95e66d8999b0c04486b
 	  document.getElementById('city2').innerHTML = data.city.name;
     weatherCardElday2.setAttribute("id", "weather-cardday3");
 
     //day 3
-<<<<<<< HEAD
     document.getElementById('tempurature3').innerHTML = Math.round(data.list[19].main.feels_like) + '&deg;';
-=======
-    document.getElementById('tempurature3').innerHTML = Math.round(data.list[16].main.feels_like) + '&deg;';
->>>>>>> f1bac9dcfd67ad3a3f4af95e66d8999b0c04486b
     document.getElementById('city3').innerHTML = data.city.name;
     weatherCardElday3.setAttribute("id", "weather-cardday4");
 
    //day 4
-<<<<<<< HEAD
     document.getElementById('tempurature4').innerHTML = Math.round(data.list[27].main.feels_like) + '&deg;';
-=======
-    document.getElementById('tempurature4').innerHTML = Math.round(data.list[24].main.feels_like) + '&deg;';
->>>>>>> f1bac9dcfd67ad3a3f4af95e66d8999b0c04486b
     document.getElementById('city4').innerHTML = data.city.name;
     weatherCardElday4.setAttribute("id", "weather-cardday5");
 
     //day 5
-<<<<<<< HEAD
     document.getElementById('tempurature5').innerHTML = Math.round(data.list[34].main.feels_like) + '&deg;';
-=======
-    document.getElementById('tempurature5').innerHTML = Math.round(data.list[30].main.feels_like) + '&deg;';
->>>>>>> f1bac9dcfd67ad3a3f4af95e66d8999b0c04486b
     document.getElementById('city5').innerHTML = data.city.name;
     weatherCardElday5.setAttribute("id", "weather-cardday6");
 }
