@@ -6,7 +6,7 @@
 }
 #main{
 background-color: rgb(214, 214, 214);
-    height: 100vh;
+    height: 120vh;
 }
 
 
@@ -76,7 +76,13 @@ background-color: rgb(214, 214, 214);
 }
 
 
+#past-searches li {
+    list-style: none;
+    width: 90%;
+    margin:0;
+}
 
 
-
-
+#past-searches{
+    padding-left: 0rem !important;
+}
